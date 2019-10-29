@@ -1,0 +1,47 @@
+testwebreathe_homepage:
+    path:     /
+    defaults: { _controller: TestwebreatheBundle:Default:index }
+
+Login:
+    path:     /Login
+    defaults: { _controller: TestwebreatheBundle\Controller\TestController::LoginAction }
+
+Tableau_De_Bord:
+    path:     /TableauDeBord
+    defaults: { _controller: TestwebreatheBundle:Test:TableauDeBord}
+
+Affihcer_Users:
+    path:     /AfficherUsers
+    defaults: { _controller: TestwebreatheBundle\Controller\TestController::AfficherUserAction }
+
+Ajouter_Users:
+    path:     /AjouterUsers
+    defaults: { _controller: TestwebreatheBundle\Controller\TestController::AjouterUserAction }
+
+Supprimer_User:
+    path:     /SupprimerUser/{id}
+    defaults: { _controller: TestwebreatheBundle:Test:SupprimerUser}
+
+Afficher_Vehicule:
+    path:     /AfficherVehicules
+    defaults: { _controller: TestwebreatheBundle:Test:AfficherVehicule }
+
+Ajouter_Vehicule:
+    path:     /AjouterVehicule
+    defaults: { _controller: TestwebreatheBundle\Controller\TestController::AjouterVehiculeAction }
+
+Supprimer_Vehicule:
+    path:     /SupprimerVehicule/{id}
+    defaults: { _controller: TestwebreatheBundle:Test:SupprimerVehicule}
+
+Afficher_Operations_ById:
+    path:     /AfficherOperations/{id}
+    defaults: { _controller: TestwebreatheBundle:Test:AfficherOperationById}
+
+Afficher_Operations:
+    path:     /AfficherOperations
+    defaults: { _controller: TestwebreatheBundle:Test:AfficherOperation}
+
+Ajouter_Operation:
+    path:     /AjouterOperation
+    defaults: { _controller: TestwebreatheBundle\Controller\TestController::AjouterOperationAction }

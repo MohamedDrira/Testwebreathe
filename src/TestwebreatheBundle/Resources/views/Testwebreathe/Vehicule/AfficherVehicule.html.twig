@@ -1,0 +1,33 @@
+{% extends "@Testwebreathe/Testwebreathe/LayoutAdmin.html.twig" %}
+
+{% block title %}Gestion vehicules{% endblock title %}
+{% block vehicules %}current_page_item{% endblock vehicules %}
+{% block body %}
+    <section class="content_section page_title">
+        <div class="content clearfix">
+            <h1 class="">Gestion vehicules</h1>
+            <div class="breadcrumbs">
+            </div>
+        </div>
+        <div class="content clearfix">
+            <a href="{{ path('Ajouter_Vehicule') }}">Ajouter vehicule</a>
+        </div>
+    </section>
+    <table class="table table-bordered">
+        <tr>
+            <td>Type vehicule</td>
+            <td>Date d'achat</td>
+            <td>Opérations</td>
+        </tr>
+        {% for v in Vehicules %}
+            <tr>
+                <td>{{ v.type }}</td>
+                <td>{{ v.date|date('Y-m-d') }}</td>
+                <td style="text-align: center"> <a class="send_button" href="{{ path('Afficher_Operations_ById',{'id':v.id}) }}">Afficher les opérations</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="delete_button" href="{{ path('Supprimer_Vehicule',{'id':v.id}) }}">Supprimer vehicule</a></td>
+            </tr>
+        {% else %}
+            La liste de publications est vide
+        {% endfor %}
+    </table>
+{% endblock body %}
+

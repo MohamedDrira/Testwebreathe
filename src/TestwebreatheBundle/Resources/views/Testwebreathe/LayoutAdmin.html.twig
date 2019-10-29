@@ -1,0 +1,84 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Test Webreathe | {% block title %}{% endblock title %}</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta name="google-site-verification" content="" />
+    <meta name="Copyright" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon/apple-touch-icon.png') }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-touch-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-touch-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/favicon/apple-touch-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-touch-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/favicon/apple-touch-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/favicon/apple-touch-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/favicon/apple-touch-icon-152x152.png') }}" />
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/settings.css') }}" media="screen" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/mediaelementplayer.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/icon-fonts.css') }}" type="text/css" media="all" />
+</head>
+
+<body class="dark  header_on_side">
+    <div id="main_wrapper">
+        <header id="site_header">
+            <div class="topbar">
+                <div class="content clearfix">
+                    <div class="top_details clearfix f_right">
+                        <span class="top_login">
+                            <a href="{{ path('Login') }}"><i class="icon ico-key3"></i>Déconnexion</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="side_heder">
+                <div id="side_heder_in">
+                    <div id="navigation_bar">
+                        <div class="content">
+                            <div id="logo">
+                                <a>
+                                    <img class="logo_light" src="{{ asset('images/logo-light.png') }}">
+                                </a>
+                            </div>
+                            <nav id="main_nav">
+                                <div id="nav_menu">
+                                    <ul id="navy" style="color: white">
+                                        <li class="normal_menu {% block tableaudebord %}{% endblock tableaudebord %}"><a href="{{ path('Tableau_De_Bord') }}"><span>Tableau de bord</span></a></li>
+                                        <li class="normal_menu {% block utilisateurs %}{% endblock utilisateurs %}"><a href="{{ path('Affihcer_Users') }}"><span>Gestion utilisateurs</span></a></li>
+                                        <li class="normal_menu {% block vehicules %}{% endblock vehicules %}"><a href="{{ path('Afficher_Vehicule') }}"><span>Gestion vehicules</span></a></li>
+                                        <li class="normal_menu {% block operation %}{% endblock operation %}"><a href="{{ path('Afficher_Operations') }}"><span>Gestion operations</span></a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="tp-banner-container">
+            <div class="tp-banner-fullwidth" >
+                {% block body %}
+                {% endblock body %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
