@@ -1,0 +1,73 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Login Or Create Acount</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+
+    <meta name="google-site-verification" content="" />
+    <meta name="Copyright" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon/apple-touch-icon.png') }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-touch-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-touch-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/favicon/apple-touch-icon-76x76.png') }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-touch-icon-114x114.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/favicon/apple-touch-icon-120x120.png') }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/favicon/apple-touch-icon-144x144.png') }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/favicon/apple-touch-icon-152x152.png') }}" />
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/icon-fonts.css') }}" type="text/css" media="all" />
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <style>.theme_option {display: none !important;}</style>
+</head>
+
+<body style="height: 100vh">
+<div id="main_wrapper" style="background-color: #2B3238">
+    <section class="content_section" style="position: relative;height: 100vh;padding-top: 5%">
+        <div class="content row_spacer centered clearfix">
+            <div class="main_title side_line centered upper">
+                <h2 style="color: white"><span class="line"></span>Connectez-vous</h2>
+            </div>
+            <div class="my_col_half on_the_center centered clearfix">
+                {{ form_start(form, {'method': 'post', 'attr': {'class': 'hm_contact_form full_contact_form'}}) }}
+                <div class="form_row clearfix">
+                    <div class="my_col_full">
+                        {{ form_widget(form.utilisateur,{'attr': {'class': 'hm_input_text','id': 'utilisateur','placeholder':'Utilisateur','maxlength':'250'}}) }}
+                    </div>
+                </div>
+                <div class="form_row clearfix">
+                    <div class="my_col_full">
+                        {{ form_widget(form.motdepasse,{'attr': {'class': 'hm_input_text','id': 'password','placeholder':'Mot de passe','maxlength':'250','type':'password'}}) }}
+                    </div>
+                </div>
+                <div class="form_row clearfix">
+                    <div class="my_col_full">
+                        {{ form_widget(form.Login,{'attr': {'class': 'send_button full_button','id': 'modifier','type':'submit','onmouseover':'trimstr()'}}) }}
+                    </div>
+                </div>
+                {{  form_end(form) }}
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+{% extends "@Testwebreathe/Testwebreathe/LayoutAdmin.html.twig" %}
+{% block title %}Ajouter Vehicule{% endblock title %}
+{% block vehicules %}current_page_item{% endblock vehicules %}
+{% block body %}
+    <section class="content_section">
+        <div class="content row_spacer2 clearfix">
+            <div class="rows_container clearfix">
+                <div class="col-md-8">
+                    <div class="main_title upper">
+                        <h2>
+                            <span class="line"><i class="ico-signup"></i></span>
+                            Ajouter
+                            <span class="main_title_c1"> Opération</span>
+                        </h2>
+                    </div>
+                    {{ form_start(form, {'method': 'post', 'attr': {'class': 'hm_contact_form full_contact_form'}}) }}
+                    <div class="form_row clearfix">
+                        <div class="my_col_half">
+                            <label for="first-name">
+                                <span class="hm_field_name">Sujet</span>
+                                <span class="hm_requires_star">*</span>
+                            </label>
+                            {{ form_widget(form.sujet,{'attr': {'class': 'hm_input_text','id': 'utilisateur','placeholder':'Sujet','maxlength':'250'}}) }}
+                        </div>
+                        <div class="my_col_half">
+                            <label for="last-name">
+                                <span class="hm_field_name">Date de début</span>
+                                <span class="hm_requires_star">*</span>
+                            </label>
+                            <div class="my_col_third">
+                                <label class="orderby_label">
+                                    {{ form_widget(form.datedebut.day,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                                </label>
+                            </div>
+                            <div class="my_col_third">
+                                <label class="orderby_label">
+                                    {{ form_widget(form.datedebut.month,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                                </label>
+                            </div>
+                            <div class="my_col_third">
+                                <label class="orderby_label">
+                                    {{ form_widget(form.datedebut.year,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row clearfix">
+                        <div class="my_col_half">
+                            <label for="last-name">
+                                <span class="hm_field_name">Vehicule</span>
+                            </label>
+                            <label class="orderby_label">
+                                {{ form_widget(form.Vehicule,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                            </label>
+                        </div>
+                        <div class="my_col_half">
+                            <label for="last-name">
+                                <span class="hm_field_name">Date de fin</span>
+                                <span class="hm_requires_star">*</span>
+                            </label>
+                            <div class="my_col_third">
+                                <label class="orderby_label">
+                                    {{ form_widget(form.datefin.day,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                                </label>
+                            </div>
+                            <div class="my_col_third">
+                                <label class="orderby_label">
+                                    {{ form_widget(form.datefin.month,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                                </label>
+                            </div>
+                            <div class="my_col_third">
+                                <label class="orderby_label">
+                                    {{ form_widget(form.datefin.year,{'attr': {'class': 'shipping_country','style':'background-color: #171b1e'}}) }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row clearfix">
+                        <div class="my_col_half">
+                            <label for="first-name">
+                                <span class="hm_field_name">Description</span>
+                                <span class="hm_requires_star">*</span>
+                            </label>
+                            {{ form_widget(form.description,{'attr': {'class': 'hm_input_text','id': 'utilisateur','placeholder':'Description','maxlength':'250'}}) }}
+                        </div>
+                        <div class="my_col_half">
+                            <label for="first-name">
+                                <span class="hm_field_name">Piéces affectées</span>
+                                <span class="hm_requires_star">*</span>
+                            </label>
+                            {{ form_widget(form.piecesaffectees,{'attr': {'class': 'hm_input_text','id': 'utilisateur','placeholder':'Piéces affectées','maxlength':'250'}}) }}
+                        </div>
+                    </div>
+                    <div class="form_row clearfix">
+                        <div class="my_col_half">
+                            <label for="first-name">
+                                <span class="hm_field_name">Image</span>
+                                <span class="hm_requires_star">*</span>
+                            </label>
+                            {{ form_widget(form.image,{'attr': {'class': 'hm_input_text','id': 'logo','accept':'.jpg, .jpeg, .png'}}) }}
+                        </div>
+                        <div class="my_col_half">
+                            <label for="first-name">
+                                <span class="hm_field_name">Valider</span>
+                            </label>
+                            {{ form_widget(form.Ajouter,{'attr': {'class': 'send_button full_button','id': 'modifier','type':'submit','onmouseover':'trimstr()'}}) }}
+                        </div>
+                    </div>
+                    <div class="form_row clearfix">
+                        <div class="my_col_full">
+                        </div>
+                    </div>
+                    {{  form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}
+

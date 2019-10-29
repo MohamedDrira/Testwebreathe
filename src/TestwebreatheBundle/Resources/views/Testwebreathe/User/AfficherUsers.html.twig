@@ -1,0 +1,35 @@
+{% extends "@Testwebreathe/Testwebreathe/LayoutAdmin.html.twig" %}
+
+{% block title %}Gestion utilisateurs{% endblock title %}
+{% block utilisateurs %}current_page_item{% endblock utilisateurs %}
+{% block body %}
+    <section class="content_section page_title">
+        <div class="content clearfix">
+            <h1 class="">Gestion utilisateurs</h1>
+            <div class="breadcrumbs">
+            </div>
+        </div>
+        <div class="content clearfix">
+            <a href="{{ path('Ajouter_Users') }}">Ajouter utilisateur</a>
+        </div>
+    </section>
+    <table class="table table-bordered">
+        <tr>
+            <td>Utilisateur</td>
+            <td>Mot de passe</td>
+            <td>Rôle</td>
+            <td>Opérations</td>
+        </tr>
+        {% for u in users %}
+            <tr>
+                <td>{{ u.utilisateur }}</td>
+                <td>{{ u.motdepasse }}</td>
+                <td>{{ u.role.role }}</td>
+                <td style="text-align: center"><a class="delete_button" href="{{ path('Supprimer_User',{'id':u.id}) }}">Supprimer utilisateur</a></td>
+            </tr>
+        {% else %}
+            La liste de publications est vide
+        {% endfor %}
+    </table>
+{% endblock body %}
+

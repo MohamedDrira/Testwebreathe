@@ -1,0 +1,42 @@
+{% extends "@Testwebreathe/Testwebreathe/LayoutAdmin.html.twig" %}
+
+{% block title %}Gestion vehicules{% endblock title %}
+{% block body %}
+    <section class="content_section page_title">
+        <div class="content clearfix">
+            <h1 class="">Gestion vehicules</h1>
+            <div class="breadcrumbs">
+            </div>
+        </div>
+        <div class="content clearfix">
+            <a href="{{ path('Ajouter_Operation') }}">Ajouter opération</a>
+        </div>
+    </section>
+    <table class="table table-bordered">
+        {% if (Operation is not empty) %}
+        <tr>
+            <td>Image</td>
+            <td>Date de début</td>
+            <td>Date de fin</td>
+            <td>Sujet</td>
+            <td>Description</td>
+            <td>Pieces Affectées</td>
+            <td>Vehicule</td>
+        </tr>
+        {% for o in Operation %}
+            <tr>
+                <td><img  height="75" width="75" src="{{ asset('uploads/'~o.image) }}" alt="Post Title"></td>
+                <td>{{ o.datedebut|date('Y-m-d') }}</td>
+                <td>{{ o.datefin|date('Y-m-d') }}</td>
+                <td>{{ o.sujet }}</td>
+                <td>{{ o.description }}</td>
+                <td>{{ o.PiecesAffectees }}</td>
+                <td>{{ o.vehicule.type }}</td>
+            </tr>
+        {% endfor %}
+        {% else %}
+        <tr><td>La liste d'opérations est vide</td></tr>
+        {% endif %}
+    </table>
+{% endblock body %}
+
